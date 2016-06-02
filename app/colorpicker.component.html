@@ -1,0 +1,8 @@
+R: {{$ctrl.r}}
+<input type="range" ng-model="$ctrl.r" max="255"/>
+G: {{$ctrl.g}}
+<input type="range" ng-model="$ctrl.g" max="255"/>
+B: {{$ctrl.b}}
+<input type="range" ng-model="$ctrl.b" max="255"/>
+
+<div style="height: 50px; background: rgb({{$ctrl.r}}, {{$ctrl.g}}, {{$ctrl.b}});"></div>

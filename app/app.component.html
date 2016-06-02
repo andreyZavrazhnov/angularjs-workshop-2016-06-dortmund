@@ -1,4 +1,9 @@
-<div class="container">
-  <h1>Hello {{ name }}!</h1>
-  <input type="text" ng-model="name" />
+<div class="container" ng-init="r=10;g=20;b=200;">
+
+  <colorpicker r="10" g="50" b="b" callback="changeColor()"></colorpicker>
+  <colorpicker r="100" g="50" b="b"></colorpicker>
+  <colorpicker r="10" g="250" b="b"></colorpicker>
+
+
+
 </div>
