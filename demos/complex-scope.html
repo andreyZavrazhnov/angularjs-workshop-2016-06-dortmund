@@ -22,7 +22,7 @@
   </div>
   <div class="col-lg-6" >
     <ul class="list-group">
-      <li class="list-group-item" ng-repeat="item in list">{{ ::item }}</li>
+      <li class="list-group-item" ng-repeat="item in list" ng-bind="::item"></li>
     </ul>
   </div>
 </div>

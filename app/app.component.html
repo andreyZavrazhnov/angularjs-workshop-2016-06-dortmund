@@ -1,9 +1,7 @@
-<div class="container" ng-init="r=10;g=20;b=200;">
+<div class="container">
 
-  <colorpicker r="10" g="50" b="b" callback="changeColor()"></colorpicker>
-  <colorpicker r="100" g="50" b="b"></colorpicker>
-  <colorpicker r="10" g="250" b="b"></colorpicker>
-
-
+  <colorpicker r="{{$ctrl.red}}" g="50" b="$ctrl.blue" callback="changeColor()">
+    Colorpicker 1 {{$parent.$ctrl.r}}
+  </colorpicker>
 
 </div>
