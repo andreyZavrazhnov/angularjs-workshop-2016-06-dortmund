@@ -10,4 +10,14 @@ angular.module('myApp')
       return $http.get(baseUrl + '/books')
         .then(responseHandler);
     };
+
+    this.find = function(isbn) {
+      return $http.get(baseUrl + '/books/' + isbn)
+        .then(responseHandler);
+    };
+
+    this.update = function(obj) {
+      return $http.put(baseUrl + '/books/' + obj.isbn, obj)
+        .then(responseHandler);
+    };
   });

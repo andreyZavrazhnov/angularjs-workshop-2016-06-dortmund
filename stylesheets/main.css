@@ -1,11 +1,7 @@
-.ng-invalid.ng-dirty {
+input.ng-invalid.ng-dirty {
     background-color: #ffcbc1;
 }
 
-.ng-invalid:focus {
-    outline-color: red;
-}
-
-.ng-valid.ng-dirty {
+input.ng-valid.ng-dirty {
     background-color: #1dca07;
 }
