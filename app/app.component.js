@@ -7,5 +7,6 @@ angular.module('myApp', ['ngComponentRouter'])
     $routeConfig: [
       { path: '/', component: 'home', name: 'Home' },
       { path: '/books', component: 'bookIndex', name: 'BookIndex' },
+      { path: '/books/:isbn/edit', component: 'bookEdit', name: 'BookEdit' },
     ]
   });

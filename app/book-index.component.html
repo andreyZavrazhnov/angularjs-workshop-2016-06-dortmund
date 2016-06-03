@@ -9,7 +9,11 @@
     <th>Author</th>
   </tr>
   <tr ng-repeat="book in $ctrl.books | filter:$ctrl.searchTermFn(searchTerm)">
-    <td>{{book.isbn}}</td>
+    <td>
+      <a ng-link="['/BookEdit', {isbn: book.isbn}]">
+        {{book.isbn}}
+      </a>
+    </td>
     <td>{{book.title}}</td>
     <td>{{book.author}}</td>
   </tr>
