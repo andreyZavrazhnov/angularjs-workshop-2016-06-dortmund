@@ -3,12 +3,12 @@
 angular.module('myApp')
   .component('bookIndex', {
     templateUrl: 'app/book-index.component.html',
-    controller: function($http) {
+    controller: function($http, bookApi) {
       var $ctrl = this;
 
-      $http.get('http://bookmonkey-api.angularjs.de/books')
-        .then(function(response) {
-          $ctrl.books = response.data;
+      bookApi.all()
+        .then(function(books) {
+          $ctrl.books = books;
         });
 
       $ctrl.searchTermFn = function(searchTerm) {
