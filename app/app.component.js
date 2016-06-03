@@ -1,11 +1,10 @@
 'use strict';
 
-angular.module('myApp', [])
+angular.module('myApp', ['ngComponentRouter'])
+  .value('$routerRootComponent', 'app')
   .component('app', {
     templateUrl: 'app/app.component.html',
-    controller: function() {
-      this.red = 10;
-      this.green = 20;
-      this.blue = 200;
-    }
+    $routeConfig: [
+      { path: '/', component: 'home' }
+    ]
   });
