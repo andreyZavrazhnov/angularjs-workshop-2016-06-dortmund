@@ -1,1 +1,18 @@
 <h1>BookIndex</h1>
+
+<input type="text" ng-model="searchTerm" class="form-control">
+
+<table class="table">
+  <tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Author</th>
+  </tr>
+  <tr ng-repeat="book in $ctrl.books | filter:$ctrl.searchTermFn(searchTerm)">
+    <td>{{book.isbn}}</td>
+    <td>{{book.title}}</td>
+    <td>{{book.author}}</td>
+  </tr>
+</table>
+
+<pre>{{$ctrl | json}}</pre>
