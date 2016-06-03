@@ -5,6 +5,7 @@ angular.module('myApp', ['ngComponentRouter'])
   .component('app', {
     templateUrl: 'app/app.component.html',
     $routeConfig: [
-      { path: '/', component: 'home' }
+      { path: '/', component: 'home', name: 'Home' },
+      { path: '/books', component: 'bookIndex', name: 'BookIndex' },
     ]
   });
