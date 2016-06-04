@@ -1,9 +1,10 @@
 describe('A book api service', function() {
-  var bookApi;
+  var bookApi, $httpBackend;
 
   beforeEach(module('myApp'));
-  beforeEach(inject(function(_bookApi_) {
+  beforeEach(inject(function(_bookApi_, _$httpBackend_) {
     bookApi = _bookApi_;
+    $httpBackend = _$httpBackend_;
   }));
 
   describe('with #bookSearchFilter', function() {
@@ -23,5 +24,17 @@ describe('A book api service', function() {
 
   });
 
+  describe('with #find', function() {
+
+    it('should find', function() {
+      var dummyBook = { author: 'Q' };
+      $httpBackend.when('GET', 'http://bookmonkey-api.angularjs.de/books/978-3-89864-728-1').respond(dummyBook)
+
+      bookApi.find('978-3-89864-728-1').then(function(book) {
+        expect(book).toEqual(dummyBook);
+      });
+      $httpBackend.flush();
+    })
+  });
 
 });
