@@ -20,4 +20,14 @@ angular.module('myApp')
       return $http.put(baseUrl + '/books/' + obj.isbn, obj)
         .then(responseHandler);
     };
+
+    this.bookSearchFilter = function(searchTerm) {
+      return function (book) {
+        if (!searchTerm) {
+          return true;
+        }
+        return book.title.indexOf(searchTerm) !== -1
+          || book.author.indexOf(searchTerm) !== -1;
+      }
+    }
   });

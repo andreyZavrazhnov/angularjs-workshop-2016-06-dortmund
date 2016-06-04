@@ -5,6 +5,7 @@ angular.module("myApp")
     bindings: {
       r: '@',
       g: '@',
-      b: '='
+      b: '=',
+      callback: '&'
     }
   });

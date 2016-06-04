@@ -2,7 +2,9 @@
 <h2>B: {{b}}</h2>
 
 R: {{$ctrl.r}}
-<input type="range" ng-model="$ctrl.r" max="255"/>
+<input type="range" ng-model="$ctrl.r" max="255"
+       ng-change="$ctrl.callback({red: $ctrl.r, green: $ctrl.g, blue: $ctrl.b})" />
+
 G: {{$ctrl.g}}
 <input type="range" ng-model="$ctrl.g" max="255"/>
 B: {{$ctrl.b}}
