@@ -10,11 +10,8 @@ angular.module('myApp')
 
       this.logColors = function(r, g, b) {
         console.log('R:', r, 'G:', g, 'B:', b)
+        this.red = this.red + 1;
       };
-
-
-
-
 
       var myScope = {
         logColors: function(r, g, b) {

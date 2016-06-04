@@ -1,7 +1,8 @@
 <h1 ng-transclude></h1>
 <h2>B: {{b}}</h2>
 
-R: {{$ctrl.r}}
+R: <span ng-bind="$ctrl.r">...</span>
+
 <input type="range" ng-model="$ctrl.r" max="255"
        ng-change="$ctrl.callback({red: $ctrl.r, green: $ctrl.g, blue: $ctrl.b})" />
 

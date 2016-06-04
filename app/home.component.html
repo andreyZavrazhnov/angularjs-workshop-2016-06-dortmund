@@ -2,3 +2,6 @@
              callback="$ctrl.logColors(red, green, blue)">
   Colorpicker 1 {{$parent.$ctrl.r}}
 </colorpicker>
+
+
+<button super-click="$ctrl.logColors(10, 20, $event)">Klick mich!</button>

@@ -15,7 +15,7 @@ module.exports = function (config) {
       'node_modules/@angular/router/angular1/ng_route_shim.js',
       'node_modules/@angular/router/angular1/angular_1_router.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'app/**/*.html',
+      'app/*.html',
       'app/**/*.js'
     ],
 
@@ -58,11 +58,11 @@ module.exports = function (config) {
     singleRun: true,
 
     preprocessors: {
-      'app/**/*.html': 'ng-html2js'
+      'app/*.html': 'ng-html2js'
     },
 
     ngHtml2JsPreprocessor: {
-      stripPrefix: 'app/',
+      //stripPrefix: 'app/',
       moduleName: 'ng'
     }
   });
