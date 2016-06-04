@@ -2,7 +2,7 @@
 
 angular.module('myApp')
   .component('bookEdit', {
-    templateUrl: 'app/book-edit.component.html',
+    templateUrl: 'app/book/book-edit.component.html',
     controller: function(bookApi) {
       var $ctrl = this;
 
